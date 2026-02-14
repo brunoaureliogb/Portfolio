@@ -134,3 +134,69 @@ h3 { margin-top: 1.35rem; }
   font-size: 0.92rem;
   opacity: 0.8;
 }
+
+/* ===== Responsive fixes (mobile/tablet/desktop) ===== */
+
+/* iOS Safari: don't auto-enlarge text */
+html { -webkit-text-size-adjust: 100%; }
+
+/* Make images responsive (just in case) */
+img { max-width: 100%; height: auto; }
+
+/* HERO: stack columns on small screens */
+@media (max-width: 900px){
+  .hero .columns { 
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .hero .column{
+    width: 100% !important;
+  }
+
+  /* Center photo + identity on mobile (optional but looks nicer) */
+  .hero .column:first-child{
+    text-align: center;
+  }
+
+  .cta{
+    justify-content: center;
+  }
+
+  .chips{
+    justify-content: center;
+  }
+
+  /* Slightly reduce name size on small screens */
+  .identity .name{
+    font-size: 1.45rem;
+  }
+}
+
+/* HIGHLIGHTS: make cards responsive */
+@media (max-width: 900px){
+  /* The 3 columns become 1 column */
+  .section-pad + .columns{
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .section-pad + .columns .column{
+    width: 100% !important;
+  }
+}
+
+/* Optional: mid-size screens (tablets) show 2 cards per row instead of 3 */
+@media (min-width: 901px) and (max-width: 1200px){
+  .section-pad + .columns{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+  }
+
+  .section-pad + .columns .column{
+    width: 48% !important;
+  }
+}
