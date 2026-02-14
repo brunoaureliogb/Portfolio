@@ -1,3 +1,15 @@
+/* ===== Global background (whole page) ===== */
+html, body {
+  min-height: 100%;
+  background: linear-gradient(135deg, rgba(13,110,253,0.10), rgba(25,135,84,0.08));
+}
+
+/* Quarto wrappers: keep transparent so the gradient shows everywhere */
+#quarto-content,
+main.content {
+  background: transparent !important;
+}
+
 /* ===== Base spacing & typography ===== */
 :root{
   --card-radius: 18px;
@@ -30,10 +42,12 @@ h3 { margin-top: 1.35rem; }
   line-height: 1.15;
 }
 
+/* Qualification under your name (bold) */
 .identity .role{
   margin-top: 0.35rem;
   font-size: 1.05rem;
   opacity: 0.9;
+  font-weight: 700;
 }
 
 .value-box{
@@ -66,6 +80,15 @@ h3 { margin-top: 1.35rem; }
   font-size: 0.86rem;
   background: rgba(255,255,255,0.75);
   border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* If you use the markdown chips version (`...`{.chip}), remove code styling */
+.chips code.chip{
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
 }
 
 /* ===== Cards ===== */
