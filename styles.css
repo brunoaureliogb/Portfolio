@@ -1,0 +1,113 @@
+/* ===== Base spacing & typography ===== */
+:root{
+  --card-radius: 18px;
+}
+
+main.content {
+  padding-top: 1.25rem;
+}
+
+h2 { margin-top: 2.2rem; }
+h3 { margin-top: 1.35rem; }
+
+.section-pad { margin-top: 2rem; }
+
+/* ===== Hero ===== */
+.hero {
+  border-radius: calc(var(--card-radius) + 6px);
+  background: linear-gradient(135deg, rgba(13,110,253,0.10), rgba(25,135,84,0.08));
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+}
+
+.hero-inner{
+  padding: 1.35rem 1.35rem 1.1rem 1.35rem;
+}
+
+.identity .name{
+  font-size: 1.75rem;
+  font-weight: 750;
+  line-height: 1.15;
+}
+
+.identity .role{
+  margin-top: 0.35rem;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.value-box{
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--card-radius);
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.cta{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ===== Chips (skills tags) ===== */
+.chips{
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip{
+  display: inline-block;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* ===== Cards ===== */
+.cardy{
+  height: 100%;
+  border-radius: var(--card-radius);
+  padding: 1rem 1.05rem;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+}
+
+.cardy-title{
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+}
+
+/* ===== Contact row ===== */
+.contact-row{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.contact-item{
+  border-radius: var(--card-radius);
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: rgba(255,255,255,0.85);
+}
+
+/* Mobile tweaks */
+@media (max-width: 900px){
+  .contact-row{ grid-template-columns: 1fr; }
+  .hero-inner{ padding: 1.1rem; }
+}
+
+/* Footer */
+.footer-note {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 0.92rem;
+  opacity: 0.8;
+}
